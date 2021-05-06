@@ -1,0 +1,82 @@
+[
+    {
+        "client_msg_id": "43bf1299-3325-4109-b690-42abb3d1b78f",
+        "type": "message",
+        "text": "<!here> to all",
+        "user": "U01NX9PD1A9",
+        "ts": "1614195205.000400",
+        "team": "T01NTJUMY6S",
+        "user_team": "T01NTJUMY6S",
+        "source_team": "T01NTJUMY6S",
+        "user_profile": {
+            "avatar_hash": "g62989874418",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6298987441821f8ed9e8aca3ca51c521.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0009-72.png",
+            "first_name": "Karl-Johan",
+            "real_name": "Karl-Johan Grahn",
+            "display_name": "",
+            "team": "T01NTJUMY6S",
+            "name": "karljohangrahn",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "kek",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "broadcast",
+                                "range": "here"
+                            },
+                            {
+                                "type": "text",
+                                "text": " to all"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "a449f958-4340-45e0-b2e3-4824238ad1c9",
+        "type": "message",
+        "text": ":smile:",
+        "user": "U01NX9PD1A9",
+        "ts": "1614195213.000700",
+        "team": "T01NTJUMY6S",
+        "user_team": "T01NTJUMY6S",
+        "source_team": "T01NTJUMY6S",
+        "user_profile": {
+            "avatar_hash": "g62989874418",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6298987441821f8ed9e8aca3ca51c521.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0009-72.png",
+            "first_name": "Karl-Johan",
+            "real_name": "Karl-Johan Grahn",
+            "display_name": "",
+            "team": "T01NTJUMY6S",
+            "name": "karljohangrahn",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jw9",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "smile"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

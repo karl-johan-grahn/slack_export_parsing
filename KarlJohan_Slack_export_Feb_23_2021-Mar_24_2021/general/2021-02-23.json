@@ -1,0 +1,123 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1614069788.000200",
+        "user": "U01NX9PD1A9",
+        "text": "<@U01NX9PD1A9> has joined the channel"
+    },
+    {
+        "client_msg_id": "96c3814e-40fa-4a10-ab76-b245522df285",
+        "type": "message",
+        "text": "asdfsadf",
+        "user": "U01NX9PD1A9",
+        "ts": "1614069927.000400",
+        "team": "T01NTJUMY6S",
+        "user_team": "T01NTJUMY6S",
+        "source_team": "T01NTJUMY6S",
+        "user_profile": {
+            "avatar_hash": "g62989874418",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6298987441821f8ed9e8aca3ca51c521.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0009-72.png",
+            "first_name": "Karl-Johan",
+            "real_name": "Karl-Johan Grahn",
+            "display_name": "",
+            "team": "T01NTJUMY6S",
+            "name": "karljohangrahn",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "A9dn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "asdfsadf"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b037b929-c417-4885-a472-36300122f8c9",
+        "type": "message",
+        "text": "test",
+        "user": "U01NX9PD1A9",
+        "ts": "1614069928.000600",
+        "team": "T01NTJUMY6S",
+        "user_team": "T01NTJUMY6S",
+        "source_team": "T01NTJUMY6S",
+        "user_profile": {
+            "avatar_hash": "g62989874418",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6298987441821f8ed9e8aca3ca51c521.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0009-72.png",
+            "first_name": "Karl-Johan",
+            "real_name": "Karl-Johan Grahn",
+            "display_name": "",
+            "team": "T01NTJUMY6S",
+            "name": "karljohangrahn",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "frZs",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "test"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "e37db692-7226-4bb2-91e5-27b3ba5836aa",
+        "type": "message",
+        "text": "vads",
+        "user": "U01NX9PD1A9",
+        "ts": "1614069930.000800",
+        "team": "T01NTJUMY6S",
+        "user_team": "T01NTJUMY6S",
+        "source_team": "T01NTJUMY6S",
+        "user_profile": {
+            "avatar_hash": "g62989874418",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6298987441821f8ed9e8aca3ca51c521.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0009-72.png",
+            "first_name": "Karl-Johan",
+            "real_name": "Karl-Johan Grahn",
+            "display_name": "",
+            "team": "T01NTJUMY6S",
+            "name": "karljohangrahn",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "x89A",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "vads"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

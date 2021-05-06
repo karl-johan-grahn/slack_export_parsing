@@ -1,0 +1,135 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1614956880.000100",
+        "user": "U01QELY7S20",
+        "text": "<@U01QELY7S20> has joined the channel"
+    },
+    {
+        "client_msg_id": "b6cb635a-fa76-422f-8173-c156cacf528a",
+        "type": "message",
+        "text": "Hi <@U01NX9PD1A9> :slightly_smiling_face:",
+        "user": "U01QELY7S20",
+        "ts": "1614957028.000400",
+        "team": "T01NTJUMY6S",
+        "user_team": "T01NTJUMY6S",
+        "source_team": "T01NTJUMY6S",
+        "user_profile": {
+            "avatar_hash": "9c7c6ff80a36",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-05\/1827637852563_9c7c6ff80a362f318c9a_72.png",
+            "first_name": "",
+            "real_name": "Alexandre Martins",
+            "display_name": "Alexandre Martins",
+            "team": "T01NTJUMY6S",
+            "name": "alexandre.mickael.mar",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ze8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U01NX9PD1A9"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "74635334-4061-4ce3-9129-bbf2b0c91b58",
+        "type": "message",
+        "text": "Finally got some messages",
+        "user": "U01QELY7S20",
+        "ts": "1614957035.000600",
+        "team": "T01NTJUMY6S",
+        "user_team": "T01NTJUMY6S",
+        "source_team": "T01NTJUMY6S",
+        "user_profile": {
+            "avatar_hash": "9c7c6ff80a36",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-05\/1827637852563_9c7c6ff80a362f318c9a_72.png",
+            "first_name": "",
+            "real_name": "Alexandre Martins",
+            "display_name": "Alexandre Martins",
+            "team": "T01NTJUMY6S",
+            "name": "alexandre.mickael.mar",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "0kY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Finally got some messages"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "692534e2-bc93-4cbc-bf87-9a64afe831cc",
+        "type": "message",
+        "text": ":slightly_smiling_face:",
+        "user": "U01QELY7S20",
+        "ts": "1614957044.000800",
+        "team": "T01NTJUMY6S",
+        "user_team": "T01NTJUMY6S",
+        "source_team": "T01NTJUMY6S",
+        "user_profile": {
+            "avatar_hash": "9c7c6ff80a36",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2021-03-05\/1827637852563_9c7c6ff80a362f318c9a_72.png",
+            "first_name": "",
+            "real_name": "Alexandre Martins",
+            "display_name": "Alexandre Martins",
+            "team": "T01NTJUMY6S",
+            "name": "alexandre.mickael.mar",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "pGDac",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "slightly_smiling_face"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

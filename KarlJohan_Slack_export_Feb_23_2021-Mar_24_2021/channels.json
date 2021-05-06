@@ -1,0 +1,46 @@
+[
+{
+    "id": "C01P0C89VC2",
+    "name": "test",
+    "created": 1614069789,
+    "creator": "U01NX9PD1A9",
+    "is_archived": false,
+    "is_general": false,
+    "members": [
+        "U01NX9PD1A9",
+        "U01QELY7S20"
+    ],
+    "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    },
+    "purpose": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    }
+},
+{
+    "id": "C01PD1A2997",
+    "name": "general",
+    "created": 1614069788,
+    "creator": "U01NX9PD1A9",
+    "is_archived": false,
+    "is_general": true,
+    "members": [
+        "U01NX9PD1A9",
+        "U01QELY7S20"
+    ],
+    "topic": {
+        "value": "Company-wide announcements and work-based matters",
+        "creator": "U01NX9PD1A9",
+        "last_set": 1614069788
+    },
+    "purpose": {
+        "value": "This channel is for workspace-wide communication and announcements. All members are in this channel.",
+        "creator": "U01NX9PD1A9",
+        "last_set": 1614069788
+    }
+}
+]

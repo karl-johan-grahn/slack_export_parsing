@@ -1,0 +1,78 @@
+[
+    {
+        "client_msg_id": "0c9b1edd-3cab-430b-91b4-ed5f21034634",
+        "type": "message",
+        "text": "got your message too now",
+        "user": "U01NX9PD1A9",
+        "ts": "1616616889.000200",
+        "team": "T01NTJUMY6S",
+        "user_team": "T01NTJUMY6S",
+        "source_team": "T01NTJUMY6S",
+        "user_profile": {
+            "avatar_hash": "g62989874418",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6298987441821f8ed9e8aca3ca51c521.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0009-72.png",
+            "first_name": "Karl-Johan",
+            "real_name": "Karl-Johan Grahn",
+            "display_name": "",
+            "team": "T01NTJUMY6S",
+            "name": "karljohangrahn",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9=x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "got your message too now"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "client_msg_id": "bc91b1b8-cb1d-453d-9c46-9a09d80ab5bd",
+        "type": "message",
+        "text": "let's export this and see what we can get",
+        "user": "U01NX9PD1A9",
+        "ts": "1616616898.000400",
+        "team": "T01NTJUMY6S",
+        "user_team": "T01NTJUMY6S",
+        "source_team": "T01NTJUMY6S",
+        "user_profile": {
+            "avatar_hash": "g62989874418",
+            "image_72": "https:\/\/secure.gravatar.com\/avatar\/6298987441821f8ed9e8aca3ca51c521.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0009-72.png",
+            "first_name": "Karl-Johan",
+            "real_name": "Karl-Johan Grahn",
+            "display_name": "",
+            "team": "T01NTJUMY6S",
+            "name": "karljohangrahn",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "lme",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "let's export this and see what we can get"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
