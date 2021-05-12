@@ -3,6 +3,14 @@
 ## Sample export
 `KarlJohan_Slack_export_Feb_23_2021-Mar_24_2021` is an export from a private Slack instance.
 
+## Team file
+The scripts expects a comma separated team file with this file content, see [`team1.txt`](./team1.txt):
+```
+user,real_name
+<slack user id>,Name of person 1
+U.........,Name of person 2
+```
+
 ## Slack export
 Run the script [`slack_export.py`](./slack_export.py) to export messages from a Slack channel:
 ```
