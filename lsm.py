@@ -46,7 +46,10 @@ def get_text_result(member, team_members):
     # Remove user mentions
     x = re.sub("\<\@[a-zA-Z0-9]*\>", "", member_text)
     y = re.sub("\<\@[a-zA-Z0-9]*\>", "", team_text)
-    return x, y
+    # Remove colons from emojis to retain text
+    em = re.sub(r"\:([\S]*)\:", r"\1", x)
+    et = re.sub(r"\:([\S]*)\:", r"\1", y)
+    return em, et
 
 def create_file(filepath, content):
     print(f'Output: {filepath}')
@@ -55,9 +58,9 @@ def create_file(filepath, content):
 
 def main():
     team_members = get_team_members()
-    output_folder = args.team_members_file.split('.')[0]
-    print(f'Creating output folder {output_folder}')
+    output_folder = args.dir_to_parse + "_lsm"
     if not os.path.exists(output_folder):
+        print(f'Creating output folder {output_folder}')
         os.makedirs(output_folder)
     for member in team_members:
         member_text, team_text = get_text_result(member, team_members)

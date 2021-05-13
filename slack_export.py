@@ -51,17 +51,33 @@ def export_channel(channel_name, channel_id, team_members, oldest_ts, latest_ts,
         for m in result["messages"]:
             if m['user'] in team_members:
                 all_message.append(m)
+            if 'thread_ts' in m.keys():
+                thread = client.conversations_replies(channel=channel_id, oldest=oldest_ts, latest=latest_ts, ts=m['thread_ts'])
+                # Skip the first reply to avoid duplication with parent message
+                for t in thread["messages"][1:]:
+                    if t['user'] in team_members:
+                        all_message.append(t)
         while result['has_more']:
             print("\tGetting more...")
             result = client.conversations_history(channel=channel_id, oldest=oldest_ts, latest=latest_ts, cursor=result['response_metadata']['next_cursor'])
             for m in result["messages"]:
                 if m['user'] in team_members:
                     all_message.append(m)
+                if 'thread_ts' in m.keys():
+                    thread = client.conversations_replies(channel=channel_id, oldest=oldest_ts, latest=latest_ts, ts=m['thread_ts'])
+                    # Skip the first reply to avoid duplication with parent message
+                    for t in thread["messages"][1:]:
+                        if t['user'] in team_members:
+                            all_message.append(t)
         # Save to disk
+        output_folder = "export_" + suffix + "_" + args.team_members_file.split('.')[0]
+        if not os.path.exists(output_folder):
+            print(f'Creating output folder {output_folder}')
+            os.makedirs(output_folder)
         filename = f'{channel_name}_{suffix}.json'
         print(f'  Downloaded {len(all_message)} messages from {channel_name}.')
-        print('  Saving to', filename)
-        with open(filename, 'w') as outfile:
+        print('  Saving to', output_folder + "/" + filename)
+        with open(output_folder + "/" + filename, 'w') as outfile:
             json.dump(all_message, outfile)
     except SlackApiError as e:
         print("Error using conversation: {}".format(e))
