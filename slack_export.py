@@ -49,26 +49,34 @@ def export_channel(channel_name, channel_id, team_members, oldest_ts, latest_ts,
         result = client.conversations_history(channel=channel_id, oldest=oldest_ts, latest=latest_ts)
         all_message = []
         for m in result["messages"]:
-            if m['user'] in team_members:
-                all_message.append(m)
+            if 'user' in m.keys():
+                if m['user'] in team_members:
+                    if len(m['text']) > 0:
+                        all_message.append(m)
             if 'thread_ts' in m.keys():
                 thread = client.conversations_replies(channel=channel_id, oldest=oldest_ts, latest=latest_ts, ts=m['thread_ts'])
                 # Skip the first reply to avoid duplication with parent message
                 for t in thread["messages"][1:]:
-                    if t['user'] in team_members:
-                        all_message.append(t)
+                    if 'user' in t.keys():
+                        if t['user'] in team_members:
+                            if len(t['text']) > 0:
+                                all_message.append(t)
         while result['has_more']:
             print("\tGetting more...")
             result = client.conversations_history(channel=channel_id, oldest=oldest_ts, latest=latest_ts, cursor=result['response_metadata']['next_cursor'])
             for m in result["messages"]:
-                if m['user'] in team_members:
-                    all_message.append(m)
+                if 'user' in m.keys():
+                    if m['user'] in team_members:
+                        if len(m['text']) > 0:
+                            all_message.append(m)
                 if 'thread_ts' in m.keys():
                     thread = client.conversations_replies(channel=channel_id, oldest=oldest_ts, latest=latest_ts, ts=m['thread_ts'])
                     # Skip the first reply to avoid duplication with parent message
                     for t in thread["messages"][1:]:
-                        if t['user'] in team_members:
-                            all_message.append(t)
+                        if 'user' in t.keys():
+                            if t['user'] in team_members:
+                                if len(t['text']) > 0:
+                                    all_message.append(t)
         # Save to disk
         output_folder = "export_" + suffix + "_" + args.team_members_file.split('.')[0]
         if not os.path.exists(output_folder):
