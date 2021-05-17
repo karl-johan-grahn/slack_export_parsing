@@ -90,9 +90,9 @@ def export_channel(channel_name, channel_id, team_members, oldest_ts, latest_ts,
     except SlackApiError as e:
         print("Error using conversation: {}".format(e))
 
-def get_team_members():
+def get_team_members(prefix):
     team_members = []
-    with open(args.team_members_file) as csv_file:
+    with open(prefix + "_" + args.team_members_file) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
         for row in csv_reader:
@@ -105,6 +105,7 @@ def get_team_members():
     return team_members
 
 if __name__ == "__main__":
-    team_members = get_team_members()
-    export_channel(args.channel_name, args.channel_id, team_members, start1_ts, end1_ts, "before")
-    export_channel(args.channel_name, args.channel_id, team_members, start2_ts, end2_ts, "during")
+    team_members_before = get_team_members("before")
+    export_channel(args.channel_name, args.channel_id, team_members_before, start1_ts, end1_ts, "before")
+    team_members_during = get_team_members("during")
+    export_channel(args.channel_name, args.channel_id, team_members_during, start2_ts, end2_ts, "during")
