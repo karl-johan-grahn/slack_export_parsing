@@ -136,3 +136,5 @@ output.txt
 team-*.txt
 git_team*.txt
 team*
+before_team-*.txt
+during_team-*.txt
