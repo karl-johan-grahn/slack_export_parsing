@@ -6,7 +6,7 @@
 
 ## Team file
 
-The scripts expects a comma separated team file with this file content, see [`team1.txt`](./team1.txt):
+The scripts expects a comma separated team file with this file content, see [`before_team1.txt`](./before_team1.txt):
 
 ```txt
 user,real_name
