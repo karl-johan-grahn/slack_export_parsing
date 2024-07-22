@@ -17,7 +17,7 @@ import datetime
 import os
 import sys
 
-TOKEN=os.getenv('SLACK_BOT_TOKEN')
+TOKEN = os.getenv('SLACK_BOT_TOKEN')
 if not(TOKEN):
     print("Error: Slack bot token environment variable is not set")
     sys.exit(2)
@@ -29,12 +29,14 @@ parser.add_argument("channel_id")
 args = parser.parse_args()
 
 start1 = "1/3/2019"
-end1   = "1/3/2020"
+end1 = "1/3/2020"
 start2 = "1/3/2020"
-end2   = "1/3/2021"
+end2 = "1/3/2021"
+
 
 def timeStamp(s):
     return time.mktime(datetime.datetime.strptime(s, "%d/%m/%Y").timetuple())
+
 
 start1_ts = timeStamp(start1)
 end1_ts = timeStamp(end1)
@@ -42,6 +44,7 @@ start2_ts = timeStamp(start2)
 end2_ts = timeStamp(end2)
 
 client = WebClient(token=TOKEN)
+
 
 def export_channel(channel_name, channel_id, team_members, oldest_ts, latest_ts, suffix):
     try:
@@ -90,6 +93,7 @@ def export_channel(channel_name, channel_id, team_members, oldest_ts, latest_ts,
     except SlackApiError as e:
         print("Error using conversation: {}".format(e))
 
+
 def get_team_members(prefix):
     team_members = []
     with open(prefix + "_" + args.team_members_file) as csv_file:
@@ -103,6 +107,7 @@ def get_team_members(prefix):
                 line_count += 1
         print(f'Read {line_count-1} members from team file')
     return team_members
+
 
 if __name__ == "__main__":
     team_members_before = get_team_members("before")

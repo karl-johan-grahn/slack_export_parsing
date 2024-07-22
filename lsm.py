@@ -14,6 +14,7 @@ parser.add_argument("dir_to_parse")
 parser.add_argument("team_members_file")
 args = parser.parse_args()
 
+
 def get_team_members():
     team_members = []
     with open(args.team_members_file) as csv_file:
@@ -28,6 +29,7 @@ def get_team_members():
                 line_count += 1
         print(f'Processed {line_count-1} members')
     return team_members
+
 
 def get_text_result(member, team_members):
     files_to_parse = args.dir_to_parse + "/*.json"
@@ -51,10 +53,12 @@ def get_text_result(member, team_members):
     et = re.sub(r"\:([\S]*)\:", r"\1", y)
     return em, et
 
+
 def create_file(filepath, content):
     print(f'Output: {filepath}')
     with open(filepath, "w") as outfile:
         outfile.write(content)
+
 
 def main():
     team_members = get_team_members()
@@ -67,6 +71,7 @@ def main():
         create_file(output_folder + "/ONLY_" + member + ".txt", member_text)
         create_file(output_folder + "/EXCEPT_" + member + ".txt", team_text)
     print(f'Done!')
+
 
 if __name__ == "__main__":
     main()
