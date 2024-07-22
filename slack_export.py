@@ -18,7 +18,7 @@ import os
 import sys
 
 TOKEN = os.getenv('SLACK_BOT_TOKEN')
-if not(TOKEN):
+if not (TOKEN):
     print("Error: Slack bot token environment variable is not set")
     sys.exit(2)
 
@@ -46,10 +46,17 @@ end2_ts = timeStamp(end2)
 client = WebClient(token=TOKEN)
 
 
-def export_channel(channel_name, channel_id, team_members, oldest_ts, latest_ts, suffix):
+def export_channel(channel_name,
+                   channel_id,
+                   team_members,
+                   oldest_ts,
+                   latest_ts,
+                   suffix):
     try:
         print(f'Getting messages from "{channel_name}" for members {team_members}')
-        result = client.conversations_history(channel=channel_id, oldest=oldest_ts, latest=latest_ts)
+        result = client.conversations_history(channel=channel_id,
+                                              oldest=oldest_ts,
+                                              latest=latest_ts)
         all_message = []
         for m in result["messages"]:
             if 'user' in m.keys():
@@ -57,7 +64,10 @@ def export_channel(channel_name, channel_id, team_members, oldest_ts, latest_ts,
                     if len(m['text']) > 0:
                         all_message.append(m)
             if 'thread_ts' in m.keys():
-                thread = client.conversations_replies(channel=channel_id, oldest=oldest_ts, latest=latest_ts, ts=m['thread_ts'])
+                thread = client.conversations_replies(channel=channel_id,
+                                                      oldest=oldest_ts,
+                                                      latest=latest_ts,
+                                                      ts=m['thread_ts'])
                 # Skip the first reply to avoid duplication with parent message
                 for t in thread["messages"][1:]:
                     if 'user' in t.keys():
@@ -66,22 +76,30 @@ def export_channel(channel_name, channel_id, team_members, oldest_ts, latest_ts,
                                 all_message.append(t)
         while result['has_more']:
             print("\tGetting more...")
-            result = client.conversations_history(channel=channel_id, oldest=oldest_ts, latest=latest_ts, cursor=result['response_metadata']['next_cursor'])
+            result = client.conversations_history(channel=channel_id,
+                                                  oldest=oldest_ts,
+                                                  latest=latest_ts,
+                                                  cursor=result['response_metadata']['next_cursor'])
             for m in result["messages"]:
                 if 'user' in m.keys():
                     if m['user'] in team_members:
                         if len(m['text']) > 0:
                             all_message.append(m)
                 if 'thread_ts' in m.keys():
-                    thread = client.conversations_replies(channel=channel_id, oldest=oldest_ts, latest=latest_ts, ts=m['thread_ts'])
-                    # Skip the first reply to avoid duplication with parent message
+                    thread = client.conversations_replies(channel=channel_id,
+                                                          oldest=oldest_ts,
+                                                          latest=latest_ts,
+                                                          ts=m['thread_ts'])
+                    # Skip the first reply to avoid duplication with
+                    # parent message
                     for t in thread["messages"][1:]:
                         if 'user' in t.keys():
                             if t['user'] in team_members:
                                 if len(t['text']) > 0:
                                     all_message.append(t)
         # Save to disk
-        output_folder = "export_" + suffix + "_" + args.team_members_file.split('.')[0]
+        output_folder = "export_" + suffix + "_" + \
+            args.team_members_file.split('.')[0]
         if not os.path.exists(output_folder):
             print(f'Creating output folder {output_folder}')
             os.makedirs(output_folder)
@@ -111,6 +129,8 @@ def get_team_members(prefix):
 
 if __name__ == "__main__":
     team_members_before = get_team_members("before")
-    export_channel(args.channel_name, args.channel_id, team_members_before, start1_ts, end1_ts, "before")
+    export_channel(args.channel_name, args.channel_id, team_members_before,
+                   start1_ts, end1_ts, "before")
     team_members_during = get_team_members("during")
-    export_channel(args.channel_name, args.channel_id, team_members_during, start2_ts, end2_ts, "during")
+    export_channel(args.channel_name, args.channel_id, team_members_during,
+                   start2_ts, end2_ts, "during")

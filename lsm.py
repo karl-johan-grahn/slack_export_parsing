@@ -46,8 +46,8 @@ def get_text_result(member, team_members):
                 elif m['user'] in team_except_current_member:
                     team_text = team_text + " " + m['text']
     # Remove user mentions
-    x = re.sub("\<\@[a-zA-Z0-9]*\>", "", member_text)
-    y = re.sub("\<\@[a-zA-Z0-9]*\>", "", team_text)
+    x = re.sub("<@[a-zA-Z0-9]*>", "", member_text)
+    y = re.sub("<@[a-zA-Z0-9]*>", "", team_text)
     # Remove colons from emojis to retain text
     em = re.sub(r"\:([\S]*)\:", r"\1", x)
     et = re.sub(r"\:([\S]*)\:", r"\1", y)
@@ -70,7 +70,7 @@ def main():
         member_text, team_text = get_text_result(member, team_members)
         create_file(output_folder + "/ONLY_" + member + ".txt", member_text)
         create_file(output_folder + "/EXCEPT_" + member + ".txt", team_text)
-    print(f'Done!')
+    print('Done!')
 
 
 if __name__ == "__main__":
