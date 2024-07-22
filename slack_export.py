@@ -53,7 +53,8 @@ def export_channel(channel_name,
                    latest_ts,
                    suffix):
     try:
-        print(f'Getting messages from "{channel_name}" for members {team_members}')
+        print(f'Getting messages from "{channel_name}"'
+              ' for members {team_members}')
         result = client.conversations_history(channel=channel_id,
                                               oldest=oldest_ts,
                                               latest=latest_ts)
@@ -79,7 +80,7 @@ def export_channel(channel_name,
             result = client.conversations_history(channel=channel_id,
                                                   oldest=oldest_ts,
                                                   latest=latest_ts,
-                                                  cursor=result['response_metadata']['next_cursor'])
+                                                  cursor=result['response_metadata']['next_cursor'])  # noqa: E501
             for m in result["messages"]:
                 if 'user' in m.keys():
                     if m['user'] in team_members:
