@@ -36,7 +36,7 @@ for f in sorted(glob.glob(files_to_parse)):
             text_result = text_result + " " + m['text']
 
 # Remove user mentions from combined text
-x = re.sub("\<\@[a-zA-Z0-9]*\>", "", text_result)
+x = re.sub("<@[a-zA-Z0-9]*>", "", text_result)
 
 output = "output.txt"
 print(f'Output: {output}')

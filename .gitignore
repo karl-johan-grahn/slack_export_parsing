@@ -138,3 +138,5 @@ git_team*.txt
 team*
 before_team-*.txt
 during_team-*.txt
+
+styles/
